@@ -4,16 +4,16 @@ import Modal from "@mui/joy/Modal";
 import ModalClose from "@mui/joy/ModalClose";
 import Chart from "./componnet/chart";
 import { data } from "./data/contstants";
-import { DialogContent, DialogTitle, ModalDialog } from "@mui/joy";
+import { Box, DialogContent, DialogTitle, ModalDialog } from "@mui/joy";
 import "./assets/styles/index.css";
 
 export default function App() {
   const [open, setOpen] = React.useState<boolean>(false);
   return (
     <React.Fragment>
-      <Button variant="outlined" color="neutral" onClick={() => setOpen(true)}>
-        Open modal
-      </Button>
+      <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent:'center' }}>
+        <Button onClick={() => setOpen(true)}> Open Modal</Button>
+      </Box>
       <Modal
         aria-labelledby="modal-title"
         aria-describedby="modal-desc"
